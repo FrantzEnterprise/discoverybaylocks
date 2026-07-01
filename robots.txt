@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frantzenterprise.github.io/discoverybaylocks/sitemap.xml
