@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', function() {
       navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
     });
 
     // Close menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
       });
     });
   }

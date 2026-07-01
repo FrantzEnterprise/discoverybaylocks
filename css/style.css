@@ -889,3 +889,262 @@ ul { list-style: none; }
 .blog-post-content h2 { margin-top: 40px; }
 .blog-post-content ul, .blog-post-content ol { margin-bottom: 1.5rem; padding-left: 25px; }
 .blog-post-content li { margin-bottom: 10px; font-size: 1.05rem; color: #555; line-height: 1.7; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Hero animations */
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero .subtitle {
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero .btn-accent {
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero .btn-outline {
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.hero-badges {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Service card animations */
+.service-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* About section animations */
+.about-content > div:first-child {
+  animation: slideInLeft 0.8s ease-out both;
+}
+
+.about-content > div:last-child {
+  animation: slideInRight 0.8s ease-out both;
+}
+
+/* CTA button pulse animation */
+.cta-section .btn-accent {
+  animation: pulse 2s infinite;
+}
+
+.cta-section .btn-accent:hover {
+  animation: none;
+  transform: translateY(-3px);
+}
+
+/* Location card staggered animation */
+.location-card {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.location-card:nth-child(1) { animation-delay: 0.05s; }
+.location-card:nth-child(2) { animation-delay: 0.1s; }
+.location-card:nth-child(3) { animation-delay: 0.15s; }
+.location-card:nth-child(4) { animation-delay: 0.2s; }
+.location-card:nth-child(5) { animation-delay: 0.25s; }
+.location-card:nth-child(6) { animation-delay: 0.3s; }
+.location-card:nth-child(7) { animation-delay: 0.35s; }
+.location-card:nth-child(8) { animation-delay: 0.4s; }
+.location-card:nth-child(9) { animation-delay: 0.45s; }
+.location-card:nth-child(10) { animation-delay: 0.5s; }
+.location-card:nth-child(11) { animation-delay: 0.55s; }
+.location-card:nth-child(12) { animation-delay: 0.6s; }
+
+/* Testimonial card staggered */
+.testimonial-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+.testimonial-card:nth-child(5) { animation-delay: 0.5s; }
+.testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Blog card hover animation enhancement */
+.blog-card .blog-image {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.blog-card:hover .blog-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.blog-card .blog-content {
+  transition: transform 0.3s ease;
+}
+
+/* Stat counter animation */
+.stat-number {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+/* Page header fade */
+.page-header h1 {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.page-header p {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* Blog post content images */
+.blog-post-content img {
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin: 30px auto;
+}
+
+/* ===== ADDITIONAL VISUAL ENHANCEMENTS ===== */
+
+/* Service card icon animation */
+.service-card:hover .icon {
+  animation: pulse 0.6s ease;
+}
+
+/* Gradient text for main heading */
+.hero h1 {
+  background: linear-gradient(to right, #ffffff, #e8e8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle overlay gradient on hero */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to top, rgba(0,51,153,0.3), transparent);
+  pointer-events: none;
+}
+
+/* Smooth page transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Image hover zoom effect */
+.about-content img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-content img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* FAQ toggle smooth rotation */
+.faq-item.active .faq-question .toggle {
+  transform: rotate(45deg);
+}
+
+/* Better back to top appearance */
+.back-to-top {
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile nav smooth slide */
+.nav-links {
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hamburger animation */
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Call now button glow effect on mobile */
+.nav-phone-mobile {
+  animation: pulse 2s infinite;
+}
+
+/* Footer links hover */
+.footer a {
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer a:hover {
+  padding-left: 5px;
+}
+
+/* ===== REDUCED MOTION PREFERENCE ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
