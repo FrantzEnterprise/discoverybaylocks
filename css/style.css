@@ -233,7 +233,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/locksmith-service-van.jpg') center/cover no-repeat;
   text-align: center;
   padding: 120px 20px 60px;
   margin-top: 0;
@@ -535,7 +535,7 @@ ul { list-style: none; }
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-  background: linear-gradient(rgba(0,51,153,0.85), rgba(0,51,153,0.85)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,51,153,0.85), rgba(0,51,153,0.85)), url('../images/locksmith-service-van.jpg') center/cover no-repeat;
   padding: 140px 20px 60px;
   text-align: center;
 }
